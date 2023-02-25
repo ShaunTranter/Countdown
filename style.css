@@ -1,0 +1,182 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*-- Background --*/
+
+section{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background:black;
+
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+   
+}
+
+@keyframes changeColour{
+    0%{
+        background: white;
+    }
+    33%{
+        background: green;
+    }
+    66%{
+        background: rgb(207, 1, 1);
+    }
+    100%{
+        background: yellow;
+    }
+}
+
+/*-- How The Squares are created--*/
+.span{
+position: relative;
+width: 60px;
+height: 60px;
+display: block;
+border: 1px solid;
+border-color: rgba(0, 0, 0, 0.363);
+border-radius: 10px;
+z-index: 2;
+opacity: 0.5;
+}
+
+.span::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left:0 ;
+    width: 100%;
+    height: 100%;
+    background: inherit;
+    transform: scale(1);
+    box-shadow: 0 0 0 15px,
+     0 0 0 30px inherit,
+     0 0 0 45px inherit,
+     0 0 0 60px inherit,
+     0 0 0 75px inherit,
+     0 0 0 100px inherit;
+     border-radius: 50%;
+     pointer-events: none;
+     transition: 2s linear;
+     opacity: 1;
+    
+    
+}
+
+.span:hover:before{
+    transform: scale(2);
+    transition: 0s;
+    opacity: 1;
+
+}
+
+h1{
+font-size: 4rem;
+}
+
+.parent-con{
+    position: absolute;
+    top:0;
+    display: flex;
+    height: 100%;
+    align-items: center;
+    
+}
+
+.container{
+    z-index: 5;
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    flex-direction: column;
+    background-color: aliceblue;
+    border-radius: 5%;
+    width: 950px;
+    height: 400px;
+    
+    
+}
+
+.container::before{
+    content: "";
+    position:absolute;
+    top:29%;
+    left:0;
+    width: 950px;
+    height:410px;
+    background: linear-gradient(45deg,#ffbc00,#ff0058);
+}
+
+.container::after{
+    content: "";
+    position:absolute;
+    top:29%;
+    left:0;
+    width: 950px;
+    height:410px;
+    background: linear-gradient(45deg,#ffbc00,#ff0058);
+    filter: blur(30px);
+}
+
+
+.con-title{
+    margin:10px ;
+    text-align: center;
+    z-index: 6;
+}
+
+.con-count{
+    display: flex;
+    flex-direction: row;
+    margin:0 auto; 
+    margin-bottom: 10px;
+    text-align: center;
+    z-index: 6;
+
+
+
+}
+
+.value{
+    font-size: 6rem;
+    line-height: 1;
+    font-weight: bold;
+    margin: 0 2rem;
+}
+
+.small{
+    font-size: 1.3rem;
+}
+
+.display-none{
+    display: none;
+}
+
+.select{
+    text-align: center;
+    margin: 30px;
+    z-index: 6;
+    font-size: 1.3rem;
+}
+
+#year-select{
+    width: 100%;
+    min-width: 15ch;
+    max-width: 30ch;
+    border: 1px solid var(--select-border);
+    border-radius: 0.25em;
+    padding: 0.25em 0.5em;
+    font-size: 1.25rem;
+    cursor: pointer;
+    line-height: 1.1;
+    background-color: #fff;
+    background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
+}

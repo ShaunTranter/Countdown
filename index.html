@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CountDown</title>
+    <script src="main.js" defer></script> 
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class ="main">
+     <span class ="span"></span>
+<div class ="parent-con">
+     <div class ="container">
+        <div class="con-title">
+     <h1 id="h1"> Christmas Count Down</h1>
+        </div>
+     <div class="con-count" id="con">
+        <div class="years-c">
+            <p class ="value" id ="year">0</p>
+            <span class ="small" id ="yearLa">years</span>
+        </div>
+        <div class="days-c">
+            <p class ="value" id ="days">0</p>
+            <span class ="small">Days</span>
+        </div>
+        <div class="hours-c">
+            <p class ="value" id ="hours">0</p>
+            <span class ="small">Hours</span>
+        </div>
+        <div class="min-c">
+            <p class ="value" id ="min">0</p>
+            <span class ="small">Minutes</span>
+        </div>
+        <div class="sec-c">
+            <p class ="value" id ="sec">0</p>
+            <span class ="small">Seconds</span>
+        </div>
+        </div>
+        
+        <div class = "select">
+            <label for ="year">Select a year!</label>
+            <select name="year" id="year-select" onchange="changeFunc();">
+                </select>
+        </div>
+     </div>
+    </div>
+
+
+    </section>
+</body>
+</html>
